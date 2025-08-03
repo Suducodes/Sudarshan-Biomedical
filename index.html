@@ -556,11 +556,20 @@
       });
     });
     // Parallax background effect using JS
-    window.addEventListener('scroll', function () {
-      // Change 0.08 for more/less effect
-      const offset = window.scrollY * 0.08;
-      document.body.style.backgroundPosition = `center ${50 + offset}px`;
-    });
+    function updateParallax() {
+      const parallaxBg = document.getElementById('parallax-bg');
+      const vh = window.innerHeight;
+      const bgHeight = parallaxBg.offsetHeight;
+      const maxOffset = bgHeight - vh;
+      // At scrollY = 0: offset = maxOffset (bottom of image at top)
+      // As scrollY increases, offset decreases (revealing higher parts of image)
+      let offset = Math.max(maxOffset - window.scrollY, 0);
+      parallaxBg.style.backgroundPosition = `center ${offset}px`;
+    }
+    window.addEventListener('scroll', updateParallax);
+    window.addEventListener('resize', updateParallax);
+    updateParallax();
   </script>
 </body>
 </html>
+
