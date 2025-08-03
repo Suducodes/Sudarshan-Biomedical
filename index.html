@@ -13,13 +13,14 @@
       line-height: 1.6;
       padding-top: 120px;
       position: relative;
+      transition: background-position 0.2s;
     }
     body::before {
       content: "";
       position: fixed;
       inset: 0;
       z-index: -1;
-      background: rgba(19,19,19,0.64); /* Overlay for good text readability */
+      background: rgba(19,19,19,0.64);
       pointer-events: none;
     }
     main { width: 100%; }
@@ -61,7 +62,6 @@
         min-height: 32px;
       }
     }
-
     .logo {
       font-size: 21px;
       font-weight: 700;
@@ -133,13 +133,30 @@
       .menu-toggle { display: block; }
     }
 
-    /* HERO SECTION */
+    /* HERO SECTION ENHANCED */
     .hero {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       padding: 60px 20px 40px 20px;
+    }
+    .profile-pic-wrap {
+      position: relative;
+      display: inline-block;
+    }
+    .profile-gradient {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      z-index: 0;
+      background: radial-gradient(circle at 65% 35%, #ff6a00bb 0%, #ff9500aa 60%, transparent 100%);
+      filter: blur(22px);
+      pointer-events: none;
+      animation: floatGlow 3.5s ease-in-out infinite alternate;
+    }
+    @keyframes floatGlow {
+      to { transform: scale(1.05) translateY(8px);}
     }
     .hero img {
       width: 260px;
@@ -150,6 +167,8 @@
       border: 6px solid #ff6a00;
       box-shadow: 0 0 20px rgba(0,0,0,0.5);
       transition: transform 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+      z-index: 1;
     }
     .hero img:hover {
       transform: scale(1.08) rotate(3deg);
@@ -162,6 +181,13 @@
       margin-bottom: 16px;
     }
     .hero .highlight { color: #ff6a00; }
+    .tagline {
+      font-size: 1.1em;
+      color: #ff9500;
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 16px #1c1c1c66;
+    }
     .download-resume {
       color: #ff6a00;
       background: transparent;
@@ -183,6 +209,23 @@
       background: #ff6a00;
       color: #1c1c1c;
       outline: none;
+    }
+
+    /* Fade-in animation for hero content */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeInHero 0.7s forwards;
+    }
+    .fade-in:nth-child(2) { animation-delay: 0.1s; }
+    .fade-in:nth-child(3) { animation-delay: 0.2s; }
+    .fade-in:nth-child(4) { animation-delay: 0.3s; }
+    .fade-in:nth-child(5) { animation-delay: 0.4s; }
+    @keyframes fadeInHero {
+      to {
+        opacity: 1;
+        transform: none;
+      }
     }
 
     /* SECTIONS & DIVIDERS */
@@ -363,20 +406,6 @@
       .section { padding: 28px 2vw; }
     }
   </style>
-  <script>
-    // Hamburger menu for mobile navigation (toggle nav visibility)
-    document.addEventListener('DOMContentLoaded', function() {
-      const toggleBtn = document.getElementById('menu-toggle');
-      const nav = document.querySelector('nav');
-      toggleBtn.addEventListener('click', function() {
-        nav.classList.toggle('active');
-        toggleBtn.setAttribute('aria-expanded', nav.classList.contains('active'));
-      });
-      nav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => { nav.classList.remove('active'); });
-      });
-    });
-  </script>
 </head>
 <body>
   <header class="floating-header">
@@ -398,10 +427,14 @@
 
   <main>
     <section class="hero" id="about">
-      <img src="profile.jpg" alt="Sudarshan profile photo">
-      <h1>I'm <span class="highlight">Sudarshan</span>, Biomedical Engineer</h1>
-      <p>Passionate about <span class="highlight">biomedical innovations</span>, genetics, and biomaterial rehabilitation enthusiast.</p>
-      <a href="resume.pdf" class="download-resume" download>Download Resume</a>
+      <div class="profile-pic-wrap">
+        <img src="profile.jpg" alt="Sudarshan profile photo">
+        <div class="profile-gradient"></div>
+      </div>
+      <h1 class="fade-in">I'm <span class="highlight">Sudarshan</span>, Biomedical Engineer</h1>
+      <p class="fade-in">Passionate about <span class="highlight">biomedical innovations</span>, genetics, and biomaterial rehabilitation enthusiast.</p>
+      <div class="tagline fade-in">“Innovating for a healthier tomorrow.”</div>
+      <a href="resume.pdf" class="download-resume fade-in" download>Download Resume</a>
     </section>
 
     <section class="section" id="education">
@@ -521,6 +554,12 @@
       nav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => { nav.classList.remove('active'); });
       });
+    });
+    // Parallax background effect using JS
+    window.addEventListener('scroll', function () {
+      // Change 0.08 for more/less effect
+      const offset = window.scrollY * 0.08;
+      document.body.style.backgroundPosition = `center ${50 + offset}px`;
     });
   </script>
 </body>
