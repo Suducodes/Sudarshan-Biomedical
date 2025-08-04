@@ -9,6 +9,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
     body {
       background: url('background.jpg') center center / cover no-repeat fixed;
+      background: none !important;
       color: #ffffff;
       line-height: 1.6;
       padding-top: 120px;
@@ -405,9 +406,18 @@
       .cards {grid-template-columns: 1fr;}
       .section { padding: 28px 2vw; }
     }
+    #parallax-bg {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: -2;
+  background: url('background.jpg') center center / cover no-repeat;
+  will-change: background-position;
+  transition: background-position 0.2s;
+}
   </style>
 </head>
 <body>
+   <div id="parallax-bg"></div>
   <header class="floating-header">
     <div class="logo">Sudarshan</div>
     <nav id="main-navigation">
@@ -572,4 +582,5 @@
   </script>
 </body>
 </html>
+
 
