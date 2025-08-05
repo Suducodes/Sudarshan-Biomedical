@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sudarshan | Biomedical Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Portfolio of Sudarshan, Biomedical Engineer. Achievements, projects, skills, and contact info." />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
     body {
-      background: url('background.jpg') center center / cover no-repeat fixed;
       background: none !important;
       color: #ffffff;
       line-height: 1.6;
@@ -21,10 +29,12 @@
       position: fixed;
       inset: 0;
       z-index: -1;
-      background: rgba(19,19,19,0.64);
+      background: rgba(19, 19, 19, 0.64);
       pointer-events: none;
     }
-    main { width: 100%; }
+    main {
+      width: 100%;
+    }
 
     /* ----------- FLOATING HEADER (PILL-SHAPED) ----------- */
     .floating-header {
@@ -36,14 +46,14 @@
       display: flex;
       align-items: center;
       min-height: 64px;
-      background: rgba(28,28,28,0.71);
+      background: rgba(28, 28, 28, 0.71);
       backdrop-filter: blur(17px);
       -webkit-backdrop-filter: blur(17px);
       border-radius: 40px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 1.5px 8px rgba(255,106,0,0.11);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 1.5px 8px rgba(255, 106, 0, 0.11);
       padding: 0 36px;
       gap: 16px;
-      border: 1.5px solid rgba(255,255,255,0.09);
+      border: 1.5px solid rgba(255, 255, 255, 0.09);
       max-width: 90vw;
       width: fit-content;
     }
@@ -91,7 +101,7 @@
       color: #ff6a00;
       border-bottom: 2px solid #ff6a00;
       outline: none;
-      background: rgba(255,106,0,0.06);
+      background: rgba(255, 106, 0, 0.06);
     }
     .menu-toggle {
       display: none;
@@ -116,22 +126,26 @@
         width: 90vw;
         flex-direction: column;
         align-items: flex-start;
-        background: rgba(28,28,28,0.98);
+        background: rgba(28, 28, 28, 0.98);
         border-radius: 32px;
-        box-shadow: 0 8px 28px rgba(0,0,0,0.22);
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
         padding: 14px 0 14px 12px;
-        border: 1.5px solid rgba(255,255,255,0.09);
+        border: 1.5px solid rgba(255, 255, 255, 0.09);
       }
-      nav.active { display: flex; }
-      nav a { 
-        margin: 8px 0 0 0; 
-        font-size: 1.08em; 
+      nav.active {
+        display: flex;
+      }
+      nav a {
+        margin: 8px 0 0 0;
+        font-size: 1.08em;
         border-bottom: none;
         width: 92vw;
         padding: 9px 0 9px 12px;
         border-radius: 18px;
       }
-      .menu-toggle { display: block; }
+      .menu-toggle {
+        display: block;
+      }
     }
 
     /* HERO SECTION ENHANCED */
@@ -157,7 +171,9 @@
       animation: floatGlow 3.5s ease-in-out infinite alternate;
     }
     @keyframes floatGlow {
-      to { transform: scale(1.05) translateY(8px);}
+      to {
+        transform: scale(1.05) translateY(8px);
+      }
     }
     .hero img {
       width: 260px;
@@ -166,22 +182,27 @@
       margin-bottom: 20px;
       object-fit: cover;
       border: 6px solid #ff6a00;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       transition: transform 0.4s ease, box-shadow 0.4s ease;
       position: relative;
       z-index: 1;
     }
     .hero img:hover {
       transform: scale(1.08) rotate(3deg);
-      box-shadow: 0 0 30px rgba(255,106,0,0.7);
+      box-shadow: 0 0 30px rgba(255, 106, 0, 0.7);
     }
-    .hero h1 { font-size: 46px; margin-bottom: 20px; }
+    .hero h1 {
+      font-size: 46px;
+      margin-bottom: 20px;
+    }
     .hero p {
       font-size: 21px;
       max-width: 680px;
       margin-bottom: 16px;
     }
-    .hero .highlight { color: #ff6a00; }
+    .hero .highlight {
+      color: #ff6a00;
+    }
     .tagline {
       font-size: 1.1em;
       color: #ff9500;
@@ -204,9 +225,10 @@
       transition: background 0.25s, color 0.25s, border 0.25s;
       letter-spacing: 0.03em;
       font-size: 18px;
-      box-shadow: 0 2px 10px rgba(255,106,0,0.09);
+      box-shadow: 0 2px 10px rgba(255, 106, 0, 0.09);
     }
-    .download-resume:hover, .download-resume:focus {
+    .download-resume:hover,
+    .download-resume:focus {
       background: #ff6a00;
       color: #1c1c1c;
       outline: none;
@@ -218,10 +240,18 @@
       transform: translateY(24px);
       animation: fadeInHero 0.7s forwards;
     }
-    .fade-in:nth-child(2) { animation-delay: 0.1s; }
-    .fade-in:nth-child(3) { animation-delay: 0.2s; }
-    .fade-in:nth-child(4) { animation-delay: 0.3s; }
-    .fade-in:nth-child(5) { animation-delay: 0.4s; }
+    .fade-in:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+    .fade-in:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+    .fade-in:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+    .fade-in:nth-child(5) {
+      animation-delay: 0.4s;
+    }
     @keyframes fadeInHero {
       to {
         opacity: 1;
@@ -244,7 +274,7 @@
       font-size: 36px;
       margin-bottom: 30px;
       text-align: center;
-      font-weight:700;
+      font-weight: 700;
       color: #fff;
       letter-spacing: 0.8px;
       border-bottom: 2px solid #ff6a00;
@@ -264,17 +294,41 @@
       border-left: 4px solid #ff6a00;
       border-radius: 12px;
       padding: 22px 23px 18px 23px;
-      box-shadow: 0 5px 20px rgba(255,106,0,0.07), 0 1.5px 3px rgba(0,0,0,0.18);
+      box-shadow: 0 5px 20px rgba(255, 106, 0, 0.07), 0 1.5px 3px rgba(0, 0, 0, 0.18);
       color: #ffffff;
       transition: transform 0.3s, box-shadow 0.2s;
       min-height: 120px;
+
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
     }
-    .card:hover, .card:focus {
-      transform: translateY(-8px) scale(1.04);
-      box-shadow: 0 8px 32px rgba(255,106,0,0.11), 0 1.5px 3px rgba(0,0,0,0.23);
+    .card img {
+      width: 100%;
+      max-height: 170px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+      background: #e6e8ec;
+      margin-bottom: 13px;
+      display: block;
+    }
+    .read-more {
+      color: #ff6a00;
+      font-weight: 600;
+      font-size: 1em;
+      margin-top: 16px;
+      display: inline-block;
+    }
+    .card:hover,
+    .card:focus {
+      box-shadow: 0 6px 30px rgba(255, 106, 0, 0.18), 0 1.5px 3px rgba(0, 0, 0, 0.17);
+      transform: translateY(-7px) scale(1.028);
       outline: none;
     }
-    .card h3 { color: #ff6a00; margin-bottom: 12px; }
+    .card h3 {
+      color: #ff6a00;
+      margin-bottom: 12px;
+    }
 
     /* TIMELINE (INTERNSHIPS) */
     .timeline {
@@ -287,18 +341,22 @@
       background: #1c1c1c;
       border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 6px 24px rgba(255,106,0,0.09), 0 1.5px 3px rgba(0,0,0,0.13);
+      box-shadow: 0 6px 24px rgba(255, 106, 0, 0.09), 0 1.5px 3px rgba(0, 0, 0, 0.13);
       transition: transform 0.3s, box-shadow 0.18s;
       color: #ffffff;
       min-width: 270px;
       flex: 1 1 340px;
     }
-    .timeline-item:hover, .timeline-item:focus {
+    .timeline-item:hover,
+    .timeline-item:focus {
       transform: translateY(-8px);
-      box-shadow: 0 10px 30px rgba(255,106,0,0.14), 0 1.5px 3px rgba(0,0,0,0.12);
+      box-shadow: 0 10px 30px rgba(255, 106, 0, 0.14), 0 1.5px 3px rgba(0, 0, 0, 0.12);
       outline: none;
     }
-    .timeline-item h3 { color: #ff6a00; margin-bottom: 12px; }
+    .timeline-item h3 {
+      color: #ff6a00;
+      margin-bottom: 12px;
+    }
 
     /* SKILLS */
     .skills {
@@ -313,11 +371,15 @@
       border-radius: 20px;
       font-weight: 600;
       color: #ff6a00;
-      box-shadow: 0 5px 15px rgba(255,106,0,0.07), 0 1.5px 3px rgba(0,0,0,0.12);
+      box-shadow: 0 5px 15px rgba(255, 106, 0, 0.07), 0 1.5px 3px rgba(0, 0, 0, 0.12);
       transition: transform 0.3s;
       font-size: 1rem;
     }
-    .skill:hover, .skill:focus { transform: scale(1.1); outline: none; }
+    .skill:hover,
+    .skill:focus {
+      transform: scale(1.1);
+      outline: none;
+    }
 
     /* LANGUAGES */
     .languages {
@@ -332,11 +394,15 @@
       border-radius: 20px;
       font-weight: 600;
       color: #ff6a00;
-      box-shadow: 0 5px 15px rgba(255,106,0,0.07), 0 1.5px 3px rgba(0,0,0,0.10);
+      box-shadow: 0 5px 15px rgba(255, 106, 0, 0.07), 0 1.5px 3px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s;
       font-size: 1rem;
     }
-    .language:hover, .language:focus { transform: scale(1.1); outline: none; }
+    .language:hover,
+    .language:focus {
+      transform: scale(1.1);
+      outline: none;
+    }
 
     /* UL/LIST SECTIONS */
     ul {
@@ -352,12 +418,16 @@
       background: #1c1c1c;
       border-radius: 12px;
       padding: 16px 18px;
-      box-shadow: 0 5px 15px rgba(255,106,0,0.07), 0 1.5px 3px rgba(0,0,0,0.10);
+      box-shadow: 0 5px 15px rgba(255, 106, 0, 0.07), 0 1.5px 3px rgba(0, 0, 0, 0.1);
       color: #ffffff;
       transition: transform 0.3s;
       font-size: 1.04rem;
     }
-    ul li:hover, ul li:focus { transform: translateY(-6px); outline: none; }
+    ul li:hover,
+    ul li:focus {
+      transform: translateY(-6px);
+      outline: none;
+    }
 
     /* CONTACT SECTION */
     .contact-link {
@@ -371,7 +441,11 @@
       border-bottom: 1px dotted #ff6a00;
       padding-bottom: 2px;
     }
-    .contact-link:hover, .contact-link:focus { letter-spacing: 2px; outline: none;}
+    .contact-link:hover,
+    .contact-link:focus {
+      letter-spacing: 2px;
+      outline: none;
+    }
 
     /* FOOTER */
     .footer {
@@ -386,17 +460,136 @@
 
     /* Animations */
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(38px);}
-      to { opacity: 1; transform: none;}
+      from {
+        opacity: 0;
+        transform: translateY(38px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
     }
 
     /* MORE RESPONSIVE TWEAKS */
     @media (max-width: 900px) {
-      .hero h1 { font-size: 35px; }
-      .section-title { font-size: 25px;}
-      .section { padding: 40px 8px; }
+      .hero h1 {
+        font-size: 35px;
+      }
+      .section-title {
+        font-size: 25px;
+      }
+      .section {
+        padding: 40px 8px;
+      }
     }
     @media (max-width: 700px) {
+      .hero img {
+        width: 170px;
+        height: 170px;
+      }
+      .hero h1 {
+        font-size: 25px;
+      }
+      .hero p {
+        font-size: 17px;
+      }
+      .download-resume {
+        font-size: 15px;
+      }
+      .section-title {
+        font-size: 19px;
+        padding-bottom: 0.09em;
+      }
+      .card,
+      .timeline-item {
+        min-width: unset;
+        font-size: 0.99em;
+      }
+      .cards {
+        grid-template-columns: 1fr;
+      }
+      .section {
+        padding: 28px 2vw;
+      }
+    }
+
+    /* PARALLAX BACKGROUND */
+    #parallax-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -2;
+      background: url("background.jpg") center center / cover no-repeat;
+      will-change: background-position;
+      transition: background-position 0.2s;
+    }
+
+    /* MODAL STYLES */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 4000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(34, 36, 38, 0.46);
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.21s;
+    }
+    .modal.active {
+      display: flex;
+    }
+    .modal-content {
+      background: #1c1c1c;
+      color: #fff;
+      max-width: 440px;
+      width: 94vw;
+      box-shadow: 0 7px 28px #ff6a0039, 0 2px 10px #0008;
+      border-radius: 14px;
+      padding: 32px 24px 26px 24px;
+      position: relative;
+      animation: fadeInModal 0.32s;
+    }
+    @keyframes fadeInModal {
+      from {
+        opacity: 0;
+        transform: translateY(38px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .modal-content h3 {
+      color: #ff6a00;
+      margin-bottom: 8px;
+      font-size: 1.38em;
+    }
+    .modal-content img {
+      max-width: 95%;
+      border-radius: 9px;
+      margin-bottom: 13px;
+    }
+    .modal-content .close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      font-size: 1.4em;
+      color: #fff;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      line-height: 1;
+    }
+    @media (max-width: 700px) {
+      .modal-content {
+        padding: 19px 7vw 13px 7vw;
+      }
       .hero img { width: 170px;height: 170px;}
       .hero h1 { font-size: 25px; }
       .hero p { font-size: 17px;}
@@ -406,18 +599,11 @@
       .cards {grid-template-columns: 1fr;}
       .section { padding: 28px 2vw; }
     }
-    #parallax-bg {
-  position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
-  z-index: -2;
-  background: url('background.jpg') center center / cover no-repeat;
-  will-change: background-position;
-  transition: background-position 0.2s;
-}
   </style>
 </head>
 <body>
-   <div id="parallax-bg"></div>
+  <div id="parallax-bg"></div>
+
   <header class="floating-header">
     <div class="logo">Sudarshan</div>
     <nav id="main-navigation">
@@ -432,27 +618,60 @@
       <a href="#extras">Extras</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button id="menu-toggle" class="menu-toggle" aria-label="Show Menu" aria-controls="main-navigation" aria-expanded="false">&#9776;</button>
+    <button
+      id="menu-toggle"
+      class="menu-toggle"
+      aria-label="Show Menu"
+      aria-controls="main-navigation"
+      aria-expanded="false"
+      >&#9776;</button
+    >
   </header>
 
   <main>
     <section class="hero" id="about">
       <div class="profile-pic-wrap">
-        <img src="profile.jpg" alt="Sudarshan profile photo">
+        <img src="profile.jpg" alt="Sudarshan profile photo" />
         <div class="profile-gradient"></div>
       </div>
-      <h1 class="fade-in">I'm <span class="highlight">Sudarshan</span>, Biomedical Engineer</h1>
-      <p class="fade-in">Passionate about <span class="highlight">biomedical innovations</span>, genetics, and biomaterial rehabilitation enthusiast.</p>
+      <h1 class="fade-in">
+        I'm <span class="highlight">Sudarshan</span>, Biomedical Engineer
+      </h1>
+      <p class="fade-in">
+        Passionate about <span class="highlight">biomedical innovations</span>,
+        genetics, and biomaterial rehabilitation enthusiast.
+      </p>
       <div class="tagline fade-in">“Innovating for a healthier tomorrow.”</div>
-      <a href="resume.pdf" class="download-resume fade-in" download>Download Resume</a>
+      <a href="resume.pdf" class="download-resume fade-in" download
+        >Download Resume</a
+      >
     </section>
 
     <section class="section" id="education">
       <h2 class="section-title">Education</h2>
-      <ul>
-        <li>KPR Institute of Engineering and Technology – B.E. Biomedical Engineering (2023 – Present), CGPA: 8.4</li>
-        <li>KSIRS International School – ICSE/ISC; 10th: 93%, 12th: 90%</li>
-      </ul>
+      <div class="cards">
+  <a class="card"
+     href="https://www.kpriet.ac.in/"
+     target="_blank"
+     rel="noopener"
+     style="text-decoration:none;color:inherit;">
+    <img src="kprit_logo.png" alt="KPR Institute of Engineering and Technology">
+    <h3>KPR Institute of Engineering and Technology</h3>
+    <p>B.E. Biomedical Engineering</p>
+    <p>2023 – Present</p>
+    <p>CGPA: 8.4</p>
+  </a>
+  <a class="card"
+     href="https://ksirs.in/"
+     target="_blank"
+     rel="noopener"
+     style="text-decoration:none;color:inherit;">
+    <img src="ksirs_logo.png" alt="KSIRS International School">
+    <h3>KSIRS International School</h3>
+    <p>ICSE/ISC</p>
+    <p>10th: 93%, 12th: 90%</p>
+  </a>
+</div>
     </section>
 
     <section class="section" id="achievements">
@@ -462,24 +681,142 @@
         <li>Gold Medal – Best Cadet Competition, IGC-RDC 2024, Madurai</li>
         <li>Banner victory for Coimbatore group at RDC Selection Camps</li>
         <li>Presented "Sono-Ink" at National Conference (KPRIET)</li>
-        <li>Paper on "Carbon capture using Algae" – 3rd Place, KRIYA 2024, PSG Tech</li>
+        <li>Paper on "Carbon capture using Algae" – 3rd Place, KRIYA 2024,
+          PSG Tech</li>
       </ul>
     </section>
 
+    <!-- Updated Projects Section with cards and modals -->
     <section class="section" id="projects">
       <h2 class="section-title">My Projects</h2>
       <div class="cards">
-        <div class="card" tabindex="0">
+        <div
+          class="card"
+          tabindex="0"
+          onclick="openModal('modal-gel')"
+          aria-label="View details for Bioactive Gel for Wound Healing"
+        >
+          <img src="gel-thumbnail.jpg" alt="Bioactive Gel for Wound Healing" />
           <h3>Bioactive Gel for Wound Healing</h3>
-          <p>Natural, cost-effective wound healing spray using Banana Peel–Aloe Vera biomaterials.</p>
+          <p>
+            Natural, cost-effective wound healing spray using Banana Peel–Aloe
+            Vera biomaterials.
+          </p>
+          <span class="read-more">Read more →</span>
         </div>
-        <div class="card" tabindex="0">
+        <div
+          class="card"
+          tabindex="0"
+          onclick="openModal('modal-games')"
+          aria-label="View details for Assistive Physical Games"
+        >
+          <img
+            src="games-thumbnail.jpg"
+            alt="Assistive Physical Games for children"
+          />
           <h3>Assistive Physical Games</h3>
-          <p>Off-screen motor skill–enhancing games for children with mental and physical challenges.</p>
+          <p>
+            Off-screen motor skill–enhancing games for children with mental and
+            physical challenges.
+          </p>
+          <span class="read-more">Read more →</span>
         </div>
-        <div class="card" tabindex="0">
+        <div
+          class="card"
+          tabindex="0"
+          onclick="openModal('modal-sonoink')"
+          aria-label="View details for Sono-Ink"
+        >
+          <img src="sonoink-thumbnail.jpg" alt="Sono-Ink Project" />
           <h3>Sono-Ink</h3>
           <p>Sound-sensitive diagnostic ink responsive to ultrasonic stimuli.</p>
+          <span class="read-more">Read more →</span>
+        </div>
+      </div>
+
+      <!-- Modal for Bioactive Gel -->
+      <div
+        class="modal"
+        id="modal-gel"
+        aria-modal="true"
+        role="dialog"
+        tabindex="-1"
+      >
+        <div class="modal-content">
+          <button
+            class="close"
+            aria-label="Close"
+            onclick="closeModal('modal-gel')"
+          >
+            &times;
+          </button>
+          <h3>Bioactive Gel for Wound Healing</h3>
+          <img src="gel-thumbnail.jpg" alt="Bioactive Gel for Wound Healing" />
+          <p>
+            Developed a natural, cost-effective wound healing spray using
+            banana peel and aloe vera as biomaterials. Focused on harnessing
+            bioactive compounds for improved healing and patient safety, with
+            an emphasis on sustainability and efficient application for rural
+            healthcare.
+          </p>
+        </div>
+      </div>
+
+      <!-- Modal for Assistive Physical Games -->
+      <div
+        class="modal"
+        id="modal-games"
+        aria-modal="true"
+        role="dialog"
+        tabindex="-1"
+      >
+        <div class="modal-content">
+          <button
+            class="close"
+            aria-label="Close"
+            onclick="closeModal('modal-games')"
+          >
+            &times;
+          </button>
+          <h3>Assistive Physical Games</h3>
+          <img
+            src="games-thumbnail.jpg"
+            alt="Assistive Physical Games for children"
+          />
+          <p>
+            Designed off-screen physical games targeting the development of
+            gross and fine motor skills in children with cognitive and physical
+            challenges. The project emphasizes inclusive play, affordable
+            materials, and adaptable rules to maximize benefit for various
+            ability levels.
+          </p>
+        </div>
+      </div>
+
+      <!-- Modal for Sono-Ink -->
+      <div
+        class="modal"
+        id="modal-sonoink"
+        aria-modal="true"
+        role="dialog"
+        tabindex="-1"
+      >
+        <div class="modal-content">
+          <button
+            class="close"
+            aria-label="Close"
+            onclick="closeModal('modal-sonoink')"
+          >
+            &times;
+          </button>
+          <h3>Sono-Ink</h3>
+          <img src="sonoink-thumbnail.jpg" alt="Sono-Ink Project" />
+          <p>
+            Engineered a sound-sensitive diagnostic ink that changes color in
+            response to specific ultrasonic signals. This innovation aims at
+            non-invasive biomarker detection for use in diagnostic labs and
+            point-of-care clinical settings.
+          </p>
         </div>
       </div>
     </section>
@@ -489,7 +826,10 @@
       <div class="timeline">
         <div class="timeline-item" tabindex="0">
           <h3>Biomedical Dept., Kumaran Medical Centre, Coimbatore</h3>
-          <p>Proposed workflow improvements, healthcare necessities, and biomedical equipment suggestions.</p>
+          <p>
+            Proposed workflow improvements, healthcare necessities, and
+            biomedical equipment suggestions.
+          </p>
         </div>
       </div>
     </section>
@@ -543,8 +883,19 @@
     <section class="section" id="contact">
       <h2 class="section-title">Contact Me</h2>
       <p style="text-align:center;">
-        Email: <a href="mailto:sudarshanvasanthakumar@gmail.com" class="contact-link">sudarshanvasanthakumar@gmail.com</a> |
-        GitHub: <a href="https://github.com/Suducodes" class="contact-link" target="_blank" rel="noopener">github.com/Suducodes</a>
+        Email:
+        <a href="mailto:sudarshanvasanthakumar@gmail.com" class="contact-link"
+          >sudarshanvasanthakumar@gmail.com</a
+        >
+        |
+        GitHub:
+        <a
+          href="https://github.com/Suducodes"
+          class="contact-link"
+          target="_blank"
+          rel="noopener"
+          >github.com/Suducodes</a
+        >
       </p>
     </section>
   </main>
@@ -552,35 +903,57 @@
   <footer class="footer">
     &copy; 2025 Sudarshan Vasanthakumar. All rights reserved.
   </footer>
+
   <script>
     // Hamburger menu for mobile navigation (toggle nav visibility)
-    document.addEventListener('DOMContentLoaded', function() {
-      const toggleBtn = document.getElementById('menu-toggle');
-      const nav = document.querySelector('nav');
-      toggleBtn.addEventListener('click', function() {
-        nav.classList.toggle('active');
-        toggleBtn.setAttribute('aria-expanded', nav.classList.contains('active'));
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.getElementById("menu-toggle");
+      const nav = document.querySelector("nav");
+      toggleBtn.addEventListener("click", function () {
+        nav.classList.toggle("active");
+        toggleBtn.setAttribute("aria-expanded", nav.classList.contains("active"));
       });
-      nav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => { nav.classList.remove('active'); });
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("active");
+        });
       });
     });
+
     // Parallax background effect using JS
     function updateParallax() {
-      const parallaxBg = document.getElementById('parallax-bg');
+      const parallaxBg = document.getElementById("parallax-bg");
+      if (!parallaxBg) return;
       const vh = window.innerHeight;
       const bgHeight = parallaxBg.offsetHeight;
       const maxOffset = bgHeight - vh;
-      // At scrollY = 0: offset = maxOffset (bottom of image at top)
-      // As scrollY increases, offset decreases (revealing higher parts of image)
       let offset = Math.max(maxOffset - window.scrollY, 0);
       parallaxBg.style.backgroundPosition = `center ${offset}px`;
     }
-    window.addEventListener('scroll', updateParallax);
-    window.addEventListener('resize', updateParallax);
+    window.addEventListener("scroll", updateParallax);
+    window.addEventListener("resize", updateParallax);
     updateParallax();
+
+    // Modal open/close logic
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (!modal) return;
+      modal.classList.add("active");
+      modal.focus();
+    }
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (!modal) return;
+      modal.classList.remove("active");
+    }
+    // Close modal on ESC key when any modal is open
+    window.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        document.querySelectorAll(".modal.active").forEach((mod) => {
+          mod.classList.remove("active");
+        });
+      }
+    });
   </script>
 </body>
 </html>
-
-
