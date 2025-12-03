@@ -10,6 +10,9 @@
     rel="stylesheet"
   />
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     * {
       margin: 0;
       padding: 0;
@@ -101,6 +104,11 @@
       color: #ff6a00;
       border-bottom: 2px solid #ff6a00;
       outline: none;
+      background: rgba(255, 106, 0, 0.06);
+    }
+    nav a.active-link {
+      color: #ff6a00;
+      border-bottom: 2px solid #ff6a00;
       background: rgba(255, 106, 0, 0.06);
     }
     .menu-toggle {
@@ -282,7 +290,7 @@
       padding-bottom: 0.18em;
     }
 
-    /* CARDS (PROJECTS) */
+    /* CARDS (PROJECTS, EDUCATION) */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -328,6 +336,10 @@
     .card h3 {
       color: #ff6a00;
       margin-bottom: 12px;
+    }
+    .card-link {
+      text-decoration: none;
+      color: inherit;
     }
 
     /* TIMELINE (INTERNSHIPS) */
@@ -513,6 +525,14 @@
       }
     }
 
+    /* Reduced motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
     /* PARALLAX BACKGROUND */
     #parallax-bg {
       position: fixed;
@@ -624,14 +644,13 @@
       aria-label="Show Menu"
       aria-controls="main-navigation"
       aria-expanded="false"
-      >&#9776;</button
-    >
+    >&#9776;</button>
   </header>
 
-  <main>
+  <main id="page-main">
     <section class="hero" id="about">
       <div class="profile-pic-wrap">
-        <img src="profile.jpg" alt="Sudarshan profile photo" />
+        <img src="profile.jpg" alt="Sudarshan profile photo" loading="lazy" />
         <div class="profile-gradient"></div>
       </div>
       <h1 class="fade-in">
@@ -650,28 +669,28 @@
     <section class="section" id="education">
       <h2 class="section-title">Education</h2>
       <div class="cards">
-  <a class="card"
-     href="https://www.kpriet.ac.in/"
-     target="_blank"
-     rel="noopener"
-     style="text-decoration:none;color:inherit;">
-    <img src="kpriet_logo.png" alt="KPR Institute of Engineering and Technology">
-    <h3>KPR Institute of Engineering and Technology</h3>
-    <p>B.E. Biomedical Engineering</p>
-    <p>2023 – Present</p>
-    <p>CGPA: 8.4</p>
-  </a>
-  <a class="card"
-     href="https://ksirs.in/"
-     target="_blank"
-     rel="noopener"
-     style="text-decoration:none;color:inherit;">
-    <img src="ksirs_logo.png" alt="KSIRS International School">
-    <h3>KSIRS International School</h3>
-    <p>ICSE/ISC</p>
-    <p>10th: 93%, 12th: 90%</p>
-  </a>
-</div>
+        <a class="card card-link"
+          href="https://www.kpriet.ac.in/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="kpriet_logo.png" alt="KPR Institute of Engineering and Technology" loading="lazy">
+          <h3>KPR Institute of Engineering and Technology</h3>
+          <p>B.E. Biomedical Engineering</p>
+          <p>2023 – Present</p>
+          <p>CGPA: 8.4</p>
+        </a>
+        <a class="card card-link"
+          href="https://ksirs.in/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="ksirs_logo.png" alt="KSIRS International School" loading="lazy">
+          <h3>KSIRS International School</h3>
+          <p>ICSE/ISC</p>
+          <p>10th: 93%, 12th: 90%</p>
+        </a>
+      </div>
     </section>
 
     <section class="section" id="achievements">
@@ -696,7 +715,7 @@
           onclick="openModal('modal-gel')"
           aria-label="View details for Bioactive Gel for Wound Healing"
         >
-          <img src="gel-thumbnail.jpg" alt="Bioactive Gel for Wound Healing" />
+          <img src="gel-thumbnail.jpg" alt="Bioactive Gel for Wound Healing" loading="lazy" />
           <h3>Bioactive Gel for Wound Healing</h3>
           <p>
             Natural, cost-effective wound healing spray using Banana Peel–Aloe
@@ -713,6 +732,7 @@
           <img
             src="games-thumbnail.jpg"
             alt="Assistive Physical Games for children"
+            loading="lazy"
           />
           <h3>Assistive Physical Games</h3>
           <p>
@@ -727,7 +747,7 @@
           onclick="openModal('modal-sonoink')"
           aria-label="View details for Sono-Ink"
         >
-          <img src="sonoink-thumbnail.jpg" alt="Sono-Ink Project" />
+          <img src="sonoink-thumbnail.jpg" alt="Sono-Ink Project" loading="lazy" />
           <h3>Sono-Ink</h3>
           <p>Sound-sensitive diagnostic ink responsive to ultrasonic stimuli.</p>
           <span class="read-more">Read more →</span>
@@ -741,6 +761,7 @@
         aria-modal="true"
         role="dialog"
         tabindex="-1"
+        aria-hidden="true"
       >
         <div class="modal-content">
           <button
@@ -751,7 +772,7 @@
             &times;
           </button>
           <h3>Bioactive Gel for Wound Healing</h3>
-          <img src="gel-thumbnail.jpg" alt="Bioactive Gel for Wound Healing" />
+          <img src="gel-thumbnail.jpg" alt="Bioactive Gel for Wound Healing" loading="lazy" />
           <p>
             Developed a natural, cost-effective wound healing spray using
             banana peel and aloe vera as biomaterials. Focused on harnessing
@@ -769,6 +790,7 @@
         aria-modal="true"
         role="dialog"
         tabindex="-1"
+        aria-hidden="true"
       >
         <div class="modal-content">
           <button
@@ -782,6 +804,7 @@
           <img
             src="games-thumbnail.jpg"
             alt="Assistive Physical Games for children"
+            loading="lazy"
           />
           <p>
             Designed off-screen physical games targeting the development of
@@ -800,6 +823,7 @@
         aria-modal="true"
         role="dialog"
         tabindex="-1"
+        aria-hidden="true"
       >
         <div class="modal-content">
           <button
@@ -810,7 +834,7 @@
             &times;
           </button>
           <h3>Sono-Ink</h3>
-          <img src="sonoink-thumbnail.jpg" alt="Sono-Ink Project" />
+          <img src="sonoink-thumbnail.jpg" alt="Sono-Ink Project" loading="lazy" />
           <p>
             Engineered a sound-sensitive diagnostic ink that changes color in
             response to specific ultrasonic signals. This innovation aims at
@@ -905,22 +929,7 @@
   </footer>
 
   <script>
-    // Hamburger menu for mobile navigation (toggle nav visibility)
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggleBtn = document.getElementById("menu-toggle");
-      const nav = document.querySelector("nav");
-      toggleBtn.addEventListener("click", function () {
-        nav.classList.toggle("active");
-        toggleBtn.setAttribute("aria-expanded", nav.classList.contains("active"));
-      });
-      nav.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          nav.classList.remove("active");
-        });
-      });
-    });
-
-    // Parallax background effect using JS
+    // Parallax background effect
     function updateParallax() {
       const parallaxBg = document.getElementById("parallax-bg");
       if (!parallaxBg) return;
@@ -930,31 +939,85 @@
       let offset = Math.max(maxOffset - window.scrollY, 0);
       parallaxBg.style.backgroundPosition = `center ${offset}px`;
     }
-    window.addEventListener("scroll", updateParallax);
-    window.addEventListener("resize", updateParallax);
-    updateParallax();
 
-    // Modal open/close logic
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.getElementById("menu-toggle");
+      const nav = document.getElementById("main-navigation");
+      const navLinks = nav.querySelectorAll("a");
+      const sections = Array.from(navLinks).map(link =>
+        document.querySelector(link.getAttribute("href"))
+      );
+
+      // Hamburger menu for mobile navigation
+      toggleBtn.addEventListener("click", function () {
+        nav.classList.toggle("active");
+        toggleBtn.setAttribute("aria-expanded", nav.classList.contains("active"));
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("active");
+        });
+      });
+
+      // Highlight active section on scroll
+      function onScroll() {
+        const scrollPos = window.scrollY + 140; // offset for floating header
+        sections.forEach((section, index) => {
+          if (!section) return;
+          const top = section.offsetTop;
+          const bottom = top + section.offsetHeight;
+          const link = navLinks[index];
+          if (scrollPos >= top && scrollPos < bottom) {
+            link.classList.add("active-link");
+          } else {
+            link.classList.remove("active-link");
+          }
+        });
+        updateParallax();
+      }
+
+      window.addEventListener("scroll", onScroll);
+      window.addEventListener("resize", updateParallax);
+
+      updateParallax();
+      onScroll();
+    });
+
+    // Modal open/close logic with aria-hidden toggling
     function openModal(id) {
       const modal = document.getElementById(id);
-      if (!modal) return;
+      const main = document.getElementById("page-main");
+      if (!modal || !main) return;
+
       modal.classList.add("active");
+      modal.setAttribute("aria-hidden", "false");
+      main.setAttribute("aria-hidden", "true");
       modal.focus();
     }
     function closeModal(id) {
       const modal = document.getElementById(id);
-      if (!modal) return;
+      const main = document.getElementById("page-main");
+      if (!modal || !main) return;
+
       modal.classList.remove("active");
+      modal.setAttribute("aria-hidden", "true");
+      main.setAttribute("aria-hidden", "false");
     }
+
     // Close modal on ESC key when any modal is open
     window.addEventListener("keydown", function (e) {
       if (e.key === "Escape") {
+        const main = document.getElementById("page-main");
         document.querySelectorAll(".modal.active").forEach((mod) => {
           mod.classList.remove("active");
+          mod.setAttribute("aria-hidden", "true");
         });
+        if (main) {
+          main.setAttribute("aria-hidden", "false");
+        }
       }
     });
   </script>
 </body>
 </html>
-
